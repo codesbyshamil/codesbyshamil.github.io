@@ -273,7 +273,8 @@ h3, h4, h5, h6 {
   color: #45505b;
   margin: 12px 0 0 0;
   font-size: 22px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-variant: small-caps;
 }
 #hero p span {
   color: #0563bb;
