@@ -238,7 +238,7 @@ h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background-image: url("https://telegra.ph//file/13cbcaa69d64befb6d9f8.jpg");
+  background-image: url("/assets/css/bg.jpg");
   background-size: cover;
   position: relative;
 }
