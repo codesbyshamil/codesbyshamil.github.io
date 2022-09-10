@@ -59,7 +59,7 @@ body.light {
     height: 270px;
     top: 0;
     left: 0;
-    background-color: #ed1b2e;
+    background-image: url("https://i.imgur.com/rzFut0i.jpeg");
     clip-path: circle(400px at 50% -48.5%);
 }
 
