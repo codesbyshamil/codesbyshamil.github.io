@@ -192,6 +192,7 @@ body.light {
 .dark .content{
     display: flex;
     padding: 1.7rem 2.5rem 2.6rem 2.5rem;
+    text-align: center;
 }
 
 .dark .right{
