@@ -59,7 +59,7 @@ body.light {
     height: 270px;
     top: 0;
     left: 0;
-    background-color: #ff0000;
+    background: url('/img1/44_459438922678576_8454371881336148734_n.jpg');
     clip-path: circle(400px at 50% -48.5%);
 }
 
