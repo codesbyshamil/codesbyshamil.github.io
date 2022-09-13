@@ -59,7 +59,7 @@ body.light {
     height: 270px;
     top: 0;
     left: 0;
-    background-color: #ff0000;
+    background-color: #ed1b2e;
     clip-path: circle(400px at 50% -48.5%);
 }
 
@@ -144,7 +144,7 @@ body.light {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    background: url('/kkarmy/img1/44_459438922678576_8454371881336148734_n.jpg') no-repeat center / cover;
+    background: url('../kkarmy/img1/44_459438922678576_8454371881336148734_n.jpg') no-repeat center / cover;
     border: 4px solid #000;
     margin-bottom: 2px;
     overflow: hidden;
