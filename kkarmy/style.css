@@ -142,7 +142,7 @@ body.light {
 .dark .main .image{
     position: relative;
     width: 110px;
-    height: 110px;
+    height: 270px;
     border-radius: 50%;
     background: url("/kkarmy/imgs/logo.png"); no-repeat center / cover;
     border: 4px solid #000;
