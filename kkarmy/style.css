@@ -59,7 +59,7 @@ body.light {
     height: 400px;
     top: 0;
     left: 0;
-    background: url("/kkarmy/imgs/bg.png");
+    background-color: #ed1b2e;
     clip-path: circle(400px at 50% -48.5%);
 }
 
