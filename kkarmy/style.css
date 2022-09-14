@@ -144,7 +144,7 @@ body.light {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    background: url('../imgs/logo.jpeg') no-repeat center / cover;
+    background: url('/kkarmy/imgs/logo.jpeg') no-repeat center / cover;
     border: 4px solid #000;
     margin-bottom: 2px;
     overflow: hidden;
