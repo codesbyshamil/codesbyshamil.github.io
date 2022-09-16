@@ -1054,3 +1054,18 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+<.>
+div.container {
+background-color: #ffffff;
+}
+div.container p {
+text-align: center;
+font-family: Cursive;
+font-size: 14px;
+font-style: normal;
+font-weight: normal;
+text-decoration: none;
+text-transform: none;
+color: #000000;
+background-color: #ffffff;
+}
