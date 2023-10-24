@@ -2,6 +2,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+  
 }
 
 a {
@@ -14,7 +15,7 @@ a:hover {
   text-decoration: none;
 }
 
-h1, {
+h1 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-style: normal;
   font-variant: small-caps;
@@ -242,12 +243,12 @@ h2, h3, h4, h5, h6 {
   background-size: cover;
   position: relative;
 }
-@media (min-width: 992px) {
+ @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
   }
 }
-#hero:before {
+/* #hero:before {
   content: "";
   background: rgba(255, 255, 255, 0.8);
   position: absolute;
@@ -255,23 +256,23 @@ h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   right: 0;
-}
+} */ */
 #hero h1 {
   margin: 0;
   font-size: 40px;
   font-weight: 500;
   line-height: 40px;
-  color: #45505b;
+  color: #d5dee8;
 }  
 #hero h2 {
   margin: 0;
   font-size: 55px;
   font-weight: 600;
   line-height: 60px;
-  color: #45505b;
+  color: #d8e3ed;
 }
 #hero p {
-  color: #45505b;
+  color: #edf1f5;
   margin: 12px 0 0 0;
   font-size: 22px;
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -289,7 +290,7 @@ h2, h3, h4, h5, h6 {
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: #45505b;
+  color: #dbdbdc;
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
@@ -304,6 +305,7 @@ h2, h3, h4, h5, h6 {
   #hero h1 {
     font-size: 32px;
     line-height: 36px;
+    color: #d5dee8;
   }
   #hero p {
     margin-top: 10px;
@@ -1054,9 +1056,8 @@ section {
 #footer .credits {
   font-size: 13px;
 }
-<.>
 div.container {
-background-color: #ffffff;
+background-color: #ffffff00;
 }
 div.container p {
 text-align: center;
@@ -1067,15 +1068,7 @@ font-weight: normal;
 text-decoration: none;
 text-transform: none;
 color: #000000;
-background-color: #ffffff;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+background-color: #ffffff00;
 }
 
 .gradient {
@@ -1091,7 +1084,7 @@ background-color: #ffffff;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
-@media (min-width: 720px) {
+/* @media (min-width: 720px) {
   .gradient {
     --size: 500px;
   }
