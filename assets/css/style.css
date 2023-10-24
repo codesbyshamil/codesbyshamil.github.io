@@ -1069,16 +1069,16 @@ text-transform: none;
 color: #000000;
 background-color: #ffffff;
 }
-@keyframes rotate {
+/* @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
-.gradient {
+/* .gradient {
   --size: 250px;
   --speed: 50s;
   --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
@@ -1111,3 +1111,4 @@ body {
 * {
   transition: all 0.25s ease-out;
 }
+ */
