@@ -390,6 +390,7 @@ main {
   opacity: 0;
   visibility: hidden;
   transition: var(--transition-2);
+  margin-top: 20px;
 }
 
 .sidebar.active .sidebar-info_more {
@@ -754,11 +755,11 @@ main {
 
 .clients-item img {
   width: 100%;
-  filter: grayscale(1);
-  transition: var(--transition-1);
+  /* filter: grayscale(1);
+  transition: var(--transition-1); */
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+/* .clients-item img:hover { filter: grayscale(0); } */
 
 
 
