@@ -731,7 +731,8 @@ main {
  * #clients 
  */
 
-.clients { margin-bottom: 15px; }
+.clients { margin-bottom: 15px; 
+margin-top: 30px;}
 
 .clients-list {
   display: flex;
