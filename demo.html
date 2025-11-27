@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Customization Demo</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  .customization-wrapper { max-width: 400px; margin: auto; }
+  .product-preview-container { position: relative; width: 100%; border: 1px solid #ddd; border-radius: 8px; }
+  .product-preview-container img { width: 100%; display: block; }
+  .uploaded-logo { position: absolute; top: 50%; left: 50%; width: 100px; cursor: move; transform: translate(-50%, -50%); opacity: 0.8; }
+  .upload-controls { margin-top: 10px; text-align: center; }
+  button { margin-top: 10px; padding: 8px 12px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="customization-wrapper">
+  <h2>Product Customization Demo</h2>
+
+  <div class="product-preview-container" id="productPreview">
+    <img id="baseProductImage" src="https://via.placeholder.com/400x400.png?text=Product" alt="Product">
+    <img id="uploadedLogo" class="uploaded-logo" src="" alt="">
+  </div>
+
+  <div class="upload-controls">
+    <input type="file" id="logoUpload" accept="image/*"><br>
+    <button id="savePreviewBtn">Save Preview</button>
+    <p id="previewInfo"></p>
+  </div>
+
+  <canvas id="previewCanvas" width="400" height="400" style="display:none;"></canvas>
+</div>
+
+<script>
+  const logoUpload = document.getElementById('logoUpload');
+  const uploadedLogo = document.getElementById('uploadedLogo');
+  const productPreview = document.getElementById('productPreview');
+  const savePreviewBtn = document.getElementById('savePreviewBtn');
+  const previewInfo = document.getElementById('previewInfo');
+  const baseImage = document.getElementById('baseProductImage');
+  const canvas = document.getElementById('previewCanvas');
+  const ctx = canvas.getContext('2d');
+
+  let isDragging = false, offsetX, offsetY;
+
+  // Upload logo
+  logoUpload.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      uploadedLogo.src = event.target.result;
+      uploadedLogo.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  });
+
+  // Drag logo
+  uploadedLogo.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.offsetX;
+    offsetY = e.offsetY;
+  });
+  document.addEventListener('mouseup', () => isDragging = false);
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const rect = productPreview.getBoundingClientRect();
+    const x = e.clientX - rect.left - offsetX;
+    const y = e.clientY - rect.top - offsetY;
+    uploadedLogo.style.left = x + 'px';
+    uploadedLogo.style.top = y + 'px';
+  });
+
+  // Save preview (merge canvas)
+  savePreviewBtn.addEventListener('click', () => {
+    const base = new Image();
+    base.src = baseImage.src;
+    const logo = new Image();
+    logo.src = uploadedLogo.src;
+
+    base.onload = function() {
+      canvas.width = base.width;
+      canvas.height = base.height;
+      ctx.clearRect(0,0,canvas.width, canvas.height);
+      ctx.drawImage(base, 0, 0, base.width, base.height);
+
+      const rect = productPreview.getBoundingClientRect();
+      const baseRect = baseImage.getBoundingClientRect();
+      const logoRect = uploadedLogo.getBoundingClientRect();
+
+      const scaleX = base.width / baseRect.width;
+      const scaleY = base.height / baseRect.height;
+      const x = (logoRect.left - rect.left) * scaleX;
+      const y = (logoRect.top - rect.top) * scaleY;
+      const w = uploadedLogo.width * scaleX;
+      const h = uploadedLogo.height * scaleY;
+
+      ctx.drawImage(logo, x, y, w, h);
+
+      const finalData = canvas.toDataURL('image/png');
+      previewInfo.innerHTML = `✅ Preview Saved!<br><img src="${finalData}" width="200">`;
+    };
+  });
+</script>
+
+</body>
+</html>
